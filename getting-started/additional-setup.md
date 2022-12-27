@@ -27,3 +27,12 @@ On Android, additional setup may be required. To access the Internet to reach ti
 {% endcode %}
 
 You may also need to do this in any other applicable manifests, such as the profile one, if not already in there.
+
+## MacOS
+
+On MacOS, additional setup may be required. To access the Internet to reach tile servers, ensure your app is configured to use the INTERNET permission. Check (and if necessary add) the following lines in the manifest file located at '/macos/runner/DebugProfile.entitlements':
+
+```dart
+<key>com.apple.security.network.client</key>
+<true/>
+```
